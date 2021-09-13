@@ -1,0 +1,140 @@
+/*
+*	Header
+*/
+header {
+	position: absolute;
+	z-index: 10;
+	text-transform: uppercase;
+
+	a {
+		text-decoration: none;
+		font-family: "Hurme Geometric Sans 3";
+	}
+
+	nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		transform: translateX(100vw);
+		background-color: var(--bg-color-alpha);
+		text-shadow: 0 0.3rem 0.7rem var(--shadow-color);
+		transition: transform 1s cubic-bezier(0.77, 0, 0.18, 1),
+			var(--general-transition);
+
+		&.active {
+			transform: translateX(0);
+
+			li {
+				opacity: 1;
+			}
+		}
+
+		li {
+			margin: 1rem;
+			padding: 0.5rem;
+			font-size: 1.5rem;
+			opacity: 0;
+			transition: opacity 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+
+			&:after {
+				content: "";
+				display: block;
+				position: relative;
+				bottom: -0.25rem;
+				border-bottom: solid 0.15rem var(--accent-color);
+				transform: scaleX(0);
+				transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+			}
+
+			&.active:after,
+			&:hover:after {
+				transform: scaleX(1.2);
+			}
+		}
+	}
+
+	button {
+		cursor: pointer;
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 0;
+		background-color: transparent;
+	}
+}
+
+#hamburger {
+	position: fixed;
+	top: 4rem;
+	right: 2rem;
+
+	span,
+	span:before,
+	span:after {
+		position: absolute;
+		display: block;
+		right: 0;
+		height: 0.25rem;
+		border-radius: 1rem;
+		opacity: 1;
+		transform: translateX(0) rotate(0);
+		background-color: var(--text-color);
+		transition: all 0.6s ease-out, var(--general-transition);
+	}
+
+	span {
+		width: 100%;
+
+		&:before,
+		&:after {
+			content: "";
+		}
+	}
+}
+
+#scrollbar-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0.25rem;
+	background-color: var(--accent-color);
+	box-shadow: 0 0.2rem 0.2rem var(--shadow-color);
+}
+
+/* Header buttons */
+.buttons-container {
+	display: flex;
+	position: fixed;
+	top: 4rem;
+	left: 2rem;
+
+	img {
+		filter: drop-shadow(0 0.3rem 0.2rem var(--shadow-color));
+	}
+
+	.logo {
+		display: none;
+		height: 2.5rem;
+		width: auto;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	> * {
+		margin: 0 1rem;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+}

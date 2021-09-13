@@ -1,0 +1,147 @@
+/*
+*	General
+*/
+* {
+	font-family: "Comfortaa", "Hurme Geometric Sans 3", "Trebuchet MS", sans-serif;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+body {
+	font-family: "Comfortaa", "Hurme Geometric Sans 3", "Trebuchet MS", sans-serif;
+	// position: relative;
+	// width: 100%;
+	// min-height: 100%;
+	margin: auto;
+	overflow: auto;
+	text-align: center;
+	font-size: 1.1rem;
+	word-break: break-word;
+	// letter-spacing: 0.05rem;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: var(--general-transition);
+}
+
+::selection {
+	background-color: var(--accent-color);
+	color: $gray-200;
+	text-shadow: none !important;
+}
+
+p,
+a {
+	margin: 1em 0;
+}
+
+a {
+	color: inherit;
+	&:visited {
+		color: inherit;
+	}
+}
+
+h1 {
+	margin: 0 0;
+	padding: 1rem 0;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Hurme Geometric Sans 3";
+
+	&:after {
+		content: "";
+		display: block;
+		position: relative;
+		bottom: -0.4rem;
+		height: 0.4rem;
+		background-color: var(--accent-color);
+		transform: scaleX(0.7);
+		transform-origin: bottom right;
+		transition: var(--general-transition);
+	}
+}
+
+button {
+	border: none;
+	background: inherit;
+}
+
+#svg-gradients,
+#page_num {
+	visibility: hidden;
+	position: absolute;
+	z-index: -10;
+	width: 0.1px;
+	height: 0.1px;
+}
+
+/*
+*	General classes
+*/
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.faded {
+	opacity: 0.6;
+}
+
+.highlighted {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 90%;
+		height: 2px;
+		background-color: var(--accent-color);
+		transition: var(--general-transition);
+	}
+}
+
+[class*="svg-"] {
+	width: 40%;
+	position: absolute;
+
+}
+
+.svg-top-left {
+	top: 0;
+	left: 0;
+}
+
+.svg-top-right {
+	top: 0;
+	right: 0;
+}

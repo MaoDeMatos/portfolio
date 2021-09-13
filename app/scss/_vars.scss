@@ -1,0 +1,109 @@
+// Variables
+
+/*
+*	Fonts
+* 
+* Main font
+*/
+@font-face {
+	font-family: "Comfortaa";
+	src: url("/src/fonts/Comfortaa-Variable.ttf");
+}
+
+/* Titles font */
+@font-face {
+	font-family: "Hurme Geometric Sans 3";
+	src: url("/src/fonts/HurmeGeometricSans3.otf");
+}
+
+// /* Monospace font */
+// @font-face {
+// 	font-family: "DM Mono";
+// 	src: url("/src/fonts/DMMono-Medium.ttf");
+// }
+
+// Transitions
+$default-delay: 0.4s;
+$default-easing: ease-out;
+
+$bg-t: background-color #{$default-delay} #{$default-easing};
+$color-t: color #{$default-delay} #{$default-easing};
+$box-s-t: box-shadow #{$default-delay} #{$default-easing};
+$text-s-t: text-shadow #{$default-delay} #{$default-easing};
+
+$svg-gradients-t: #{$default-delay};
+
+// Colors
+$white: #fff;
+$gray-100: #fafafa;
+$gray-200: #f0f0f0;
+$gray-300: #e3e3e3;
+$gray-400: #b9b9b9;
+$gray-500: #909090;
+$gray-600: #6e6e6e;
+$gray-700: #4a4a4a;
+$gray-800: #2f2f2f;
+$gray-900: #252525;
+$black: #000;
+
+$teal: #21bba1;
+$pale-red: #ba183a;
+
+$bg-alpha-dark: rgba(43, 43, 43, 0.8);
+$bg-alpha-light: rgba(235, 235, 235, 0.7);
+
+/*
+*	Color themes
+*/
+:root {
+	--general-transition:
+		#{$bg-t},
+		#{$color-t},
+		#{$box-s-t},
+		#{$text-s-t};
+}
+
+html {
+
+	&.dark {
+		--bg-color: #{$gray-900};
+		--bg-color-2: #{$gray-800};
+		--text-color: #{$gray-200};
+		--accent-color: #{$teal};
+		--accent-color-2: #{$pale-red};
+		--shadow-color: #{$black};
+		--bg-color-alpha: #{$bg-alpha-dark};
+	}
+
+	&.light {
+		--bg-color: #{$gray-400};
+		--bg-color-2: #{$gray-300};
+		--text-color: #{$gray-900};
+		--accent-color: #{$pale-red};
+		--accent-color-2: #{$teal};
+		--shadow-color: #{$gray-600};
+		--bg-color-alpha: #{$bg-alpha-light};
+	}
+}
+
+.color-theme-1 {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: var(--general-transition);
+}
+
+.color-theme-2 {
+	background-color: var(--bg-color-2);
+	color: var(--text-color);
+	transition: var(--general-transition);
+}
+
+.color-theme-3 {
+	background-color: transparent;
+	color: var(--text-color);
+	transition: var(--general-transition);
+}
+
+stop {
+	transition: $svg-gradients-t;
+}

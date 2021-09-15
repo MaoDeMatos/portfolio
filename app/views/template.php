@@ -8,12 +8,18 @@
 	<!-- Load stylesheets -->
 	<link rel="stylesheet" type="text/css" href="<?= CSS_DIR ?>style.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?= CSS_DIR ?>media_queries.min.css" />
+	<!-- If needed, load page CSS -->
+	<?php if (isset($stylesheets) && !empty($stylesheets)) {
+		echo $stylesheets;
+	} ?>
+
 	<meta name="theme-color" content="#252525" />
 	<title>Mao De Matos</title>
 </head>
 <!-- Site internet réalisé par De Matos Mao -->
 <!-- Contact à l'adresse suivante : -->
 <!-- mao.dematos@gmail.com -->
+
 <body>
 
 	<?php require VIEWS . "svg/gradients.html" ?>

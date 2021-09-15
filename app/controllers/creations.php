@@ -1,5 +1,6 @@
 <?php
 
+$stylesheets = '<link rel="stylesheet" type="text/css" href="'. CSS_DIR . 'creations.min.css" />';
 $scripts = '<script defer src="' . JS_DIR . 'creations.js"></script>';
 
 ob_start(); ?>
@@ -17,11 +18,11 @@ require VIEWS . "intro.php";?>
 <!-- Jinskow section -->
 <?php include VIEWS . "creations/jinskow.html"; ?>
 
-<!-- Php api section -->
-<?php //include VIEWS . "creations/php_api.html"; ?>
+<!-- Php API section -->
+<?php include VIEWS . "creations/php_api.html"; ?>
 
 <!-- Contact section -->
-<?php include VIEWS . "contact.php"; ?>
-<?php
+<?php include VIEWS . "contact.php";
+
 $content = ob_get_clean();
 require VIEWS  . "template.php";

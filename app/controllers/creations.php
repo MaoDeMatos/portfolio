@@ -3,7 +3,6 @@
 $scripts = '<script defer src="' . JS_DIR . 'creations.js"></script>';
 
 ob_start(); ?>
-<section id="section-style-start" class="color-theme-1"></section>
 
 <!-- Intro section -->
 <?php $intro_content = '
@@ -17,6 +16,9 @@ require VIEWS . "intro.php";?>
 
 <!-- Jinskow section -->
 <?php include VIEWS . "creations/jinskow.html"; ?>
+
+<!-- Php api section -->
+<?php //include VIEWS . "creations/php_api.html"; ?>
 
 <!-- Contact section -->
 <?php include VIEWS . "contact.php"; ?>

@@ -18,7 +18,7 @@ require VIEWS . "intro.php";?>
 <?php include VIEWS . "creations/jinskow.html"; ?>
 
 <!-- Php api section -->
-<?php //include VIEWS . "creations/php_api.html"; ?>
+<?php include VIEWS . "creations/php_api.html"; ?>
 
 <!-- Contact section -->
 <?php include VIEWS . "contact.php"; ?>

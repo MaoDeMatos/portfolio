@@ -6,10 +6,10 @@ var html = $("html"),
 	page_num = $("#page_num").attr("data-page-num"),
 	active_link = "header nav ul li:nth-child(" + page_num + ")",
 	img_dir = "/src/img/",
-	section_style = $("#section-style-start"),
-	section_style_2 = $("#section-style-languages"),
-	section_style_3 = $("#section-style-pcs"),
-	section_style_4 = $("#section-style-bubbles"),
+	section_style_start = $("#section-style-start"),
+	section_style_languages = $("#section-style-languages"),
+	section_style_pcs = $("#section-style-pcs"),
+	section_style_bubbles = $("#section-style-bubbles"),
 	menu_button = $("#hamburger"),
 	color_theme_button = $("#change-color-theme-button"),
 	scrollbar = $("#scrollbar-container"),
@@ -83,15 +83,15 @@ $(function () {
 			}, 200);
 
 			/** Change the background of the style sections */
-			section_style.css(
+			section_style_start.css(
 				"background-image",
 				"url(" + img_dir + "code_block_web_red.svg)"
 			);
-			section_style_3.css(
+			section_style_pcs.css(
 				"background-image",
 				"url(" + img_dir + "pcs_red.svg)"
 			);
-			section_style_4.css(
+			section_style_bubbles.css(
 				"background-image",
 				"url(" + img_dir + "speech_bubbles_black.png)"
 			);
@@ -118,12 +118,12 @@ $(function () {
 			}, 200);
 
 			/** Change the background of the style sections */
-			section_style.css(
+			section_style_start.css(
 				"background-image",
 				"url(" + img_dir + "code_block_web.svg)"
 			);
-			section_style_3.css("background-image", "url(" + img_dir + "pcs.svg)");
-			section_style_4.css(
+			section_style_pcs.css("background-image", "url(" + img_dir + "pcs.svg)");
+			section_style_bubbles.css(
 				"background-image",
 				"url(" + img_dir + "speech_bubbles_grey.png)"
 			);

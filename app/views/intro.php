@@ -1,3 +1,5 @@
+<section id="section-style-start" class="color-theme-1"></section>
+
 <section id="section-intro" class="color-theme-2 flex column">
 	<!-- <div class="corner-div-1"></div> -->
 
@@ -17,5 +19,3 @@
 	<!-- <div class="corner-div-4 vertical"></div> -->
 
 </section>
-
-<section id="section-style-languages" class="color-theme-1"></section>

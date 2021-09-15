@@ -18,11 +18,11 @@ require VIEWS . "intro.php";?>
 <!-- Jinskow section -->
 <?php include VIEWS . "creations/jinskow.html"; ?>
 
-<!-- Php api section -->
+<!-- Php API section -->
 <?php include VIEWS . "creations/php_api.html"; ?>
 
 <!-- Contact section -->
-<?php include VIEWS . "contact.php"; ?>
-<?php
+<?php include VIEWS . "contact.php";
+
 $content = ob_get_clean();
 require VIEWS  . "template.php";

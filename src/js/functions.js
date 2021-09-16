@@ -13,7 +13,7 @@
  * - shift : the shift will be applied from the top position of the element (default: 0)
  * @returns {void}
  */
-function parallaxAnimation(target, options = {}) {
+ function parallaxAnimation(target, options = {}) {
 	/**
 	 * Variables
 	 */
@@ -50,4 +50,107 @@ function scrollBarAnimation(scrollbar) {
 	} else {
 		scrollbar.prop("style", "width: " + scrollPercent + "vw;");
 	}
+}
+
+/**
+ * Toggle menu on/off
+ * @param $this The element that triggers the event
+ */
+function toggleMenu($this) {
+	/** Define "$this" for the setTimeout() function */
+	/** On desktop version */
+	if (windowW > 799) {
+		/** If not active : animates to the arrow */
+		if (!$this.hasClass("active")) {
+			$this.toggleClass("arrow");
+			setTimeout(function () {
+				$this.toggleClass("arrow").toggleClass("active").toggleClass("left");
+			}, 1000);
+			/** If already active : animates to the left */
+		} else {
+			$this.toggleClass("active");
+			setTimeout(function () {
+				$this.toggleClass("left");
+			}, 1000);
+		}
+		/** On mobile version */
+	} else {
+		$this.toggleClass("arrow");
+	}
+	nav.toggleClass("active");
+}
+
+/**
+ * Toggle light/dark modes
+ */
+function changeColorTheme() {
+	/** If page has dark mode on */
+	if (html.hasClass("light")) {
+		/** Cancel animation queue on the image and fade it out */
+		color_theme_button.children("img").stop(true, true).fadeOut(200);
+
+		/** After .2s, change image and fade it back in */
+		setTimeout(function () {
+			color_theme_button
+				.children("img")
+				.prop("src", img_dir + "sun.svg")
+				.fadeIn(200);
+		}, 200);
+
+		/** Change the background of the style sections */
+		section_style_start.css(
+			"background-image",
+			"url(" + img_dir + "code_block_web.svg)"
+		);
+		section_style_pcs.css("background-image", "url(" + img_dir + "pcs.svg)");
+		section_style_bubbles.css(
+			"background-image",
+			"url(" + img_dir + "speech_bubbles_grey.png)"
+		);
+
+		/** Change the icons in the contact section */
+		contact_section
+			.find("#linkedin_img")
+			.attr("src", img_dir + "linkedin_grey.svg");
+		contact_section
+			.find("#github_img")
+			.attr("src", img_dir + "github_grey.svg");
+	} else {
+		/** Cancel animation queue on the image and fade it out */
+		color_theme_button.children("img").stop(true, true).fadeOut(200);
+
+		/** After .2s, change image and fade it back in */
+		setTimeout(function () {
+			color_theme_button
+				.children("img")
+				.prop("src", img_dir + "moon-dark.svg")
+				.fadeIn(200);
+		}, 200);
+
+		/** Change the background of the style sections */
+		section_style_start.css(
+			"background-image",
+			"url(" + img_dir + "code_block_web_red.svg)"
+		);
+		section_style_pcs.css(
+			"background-image",
+			"url(" + img_dir + "pcs_red.svg)"
+		);
+		section_style_bubbles.css(
+			"background-image",
+			"url(" + img_dir + "speech_bubbles_black.png)"
+		);
+
+		/** Change the icons in the contact section */
+		contact_section
+			.find("#linkedin_img")
+			.attr("src", img_dir + "linkedin_black.svg");
+		contact_section
+			.find("#github_img")
+			.attr("src", img_dir + "github_black.svg");
+
+		/** Else, page has light mode on */
+	}
+	/** Change the color theme class */
+	html.toggleClass("dark").toggleClass("light");
 }

@@ -23,10 +23,10 @@
 
 		<ul class="flex flex-wrap">
 			<li>
-				<a href="http://www.linkedin.com/in/mao-de-matos"><img id="linkedin_img" src="<?= IMG_DIR ?>linkedin_grey.svg" title="LinkedIn" alt="LinkedIn" /></a>
+				<a href="http://www.linkedin.com/in/mao-de-matos"><img id="linkedin_img" src="<?= $icons["linkedin"] ?>" title="LinkedIn" alt="LinkedIn" /></a>
 			</li>
 			<li>
-				<a href="https://github.com/MaoDeMatos"><img id="github_img" src="<?= IMG_DIR ?>github_grey.svg" title="GitHub" alt="GitHub" /></a>
+				<a href="https://github.com/MaoDeMatos"><img id="github_img" src="<?= $icons["github"] ?>" title="GitHub" alt="GitHub" /></a>
 			</li>
 		</ul>
 

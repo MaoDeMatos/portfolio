@@ -13,7 +13,7 @@
  * - shift : the shift will be applied from the top position of the element (default: 0)
  * @returns {void}
  */
- function parallaxAnimation(target, options = {}) {
+function parallaxAnimation(target, options = {}) {
 	/**
 	 * Variables
 	 */
@@ -84,7 +84,7 @@ function toggleMenu($this) {
  * Toggle light/dark modes
  */
 function changeColorTheme() {
-	/** If page has dark mode on */
+	/** If page has light mode on */
 	if (html.hasClass("light")) {
 		/** Cancel animation queue on the image and fade it out */
 		color_theme_button.children("img").stop(true, true).fadeOut(200);
@@ -97,17 +97,6 @@ function changeColorTheme() {
 				.fadeIn(200);
 		}, 200);
 
-		/** Change the background of the style sections */
-		section_style_start.css(
-			"background-image",
-			"url(" + img_dir + "code_block_web.svg)"
-		);
-		section_style_pcs.css("background-image", "url(" + img_dir + "pcs.svg)");
-		section_style_bubbles.css(
-			"background-image",
-			"url(" + img_dir + "speech_bubbles_grey.png)"
-		);
-
 		/** Change the icons in the contact section */
 		contact_section
 			.find("#linkedin_img")
@@ -115,6 +104,9 @@ function changeColorTheme() {
 		contact_section
 			.find("#github_img")
 			.attr("src", img_dir + "github_grey.svg");
+
+		setCookie("color_theme", "dark");
+		/** Else, page has dark mode on */
 	} else {
 		/** Cancel animation queue on the image and fade it out */
 		color_theme_button.children("img").stop(true, true).fadeOut(200);
@@ -127,20 +119,6 @@ function changeColorTheme() {
 				.fadeIn(200);
 		}, 200);
 
-		/** Change the background of the style sections */
-		section_style_start.css(
-			"background-image",
-			"url(" + img_dir + "code_block_web_red.svg)"
-		);
-		section_style_pcs.css(
-			"background-image",
-			"url(" + img_dir + "pcs_red.svg)"
-		);
-		section_style_bubbles.css(
-			"background-image",
-			"url(" + img_dir + "speech_bubbles_black.png)"
-		);
-
 		/** Change the icons in the contact section */
 		contact_section
 			.find("#linkedin_img")
@@ -149,8 +127,21 @@ function changeColorTheme() {
 			.find("#github_img")
 			.attr("src", img_dir + "github_black.svg");
 
-		/** Else, page has light mode on */
+		setCookie("color_theme", "light");
 	}
 	/** Change the color theme class */
 	html.toggleClass("dark").toggleClass("light");
+}
+
+/**
+ * Set a cookie
+ * @param {string} cName Cookie name
+ * @param {string} cValue Cookie value
+ * @param {number} expirationDays Number of days before it expires (default value : 60)
+ */
+function setCookie(cName, cValue, expirationDays = 60) {
+	const date = new Date();
+	date.setTime(date.getTime() + expirationDays * 24 * 60 * 60 * 1000);
+	let expires = "expires=" + date.toUTCString();
+	document.cookie = cName + "=" + cValue + ";" + expires + ";path=/;SameSite=Strict; Secure";
 }

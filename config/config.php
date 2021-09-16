@@ -2,7 +2,7 @@
 
 // URLs configuration
 define('APP_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/app/');
-define('HOST', '//' . $_SERVER['HTTP_HOST'] . '/');
+define('HOST', '/');
 
 /**
  * Directories configuration

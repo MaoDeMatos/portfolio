@@ -21,6 +21,9 @@ require VIEWS . "intro.php";?>
 <!-- Php API section -->
 <?php include VIEWS . "creations/php_api.html"; ?>
 
+<!-- Portfolio section -->
+<?php include VIEWS . "creations/portfolio.html"; ?>
+
 <!-- Contact section -->
 <?php include VIEWS . "contact.php";
 

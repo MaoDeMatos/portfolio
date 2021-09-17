@@ -144,36 +144,9 @@
 	}
 
 	/*
-	*	Shapes styling
-	*
-	*	Top left & right corners
+	* SVG shapes
 	*/
-	.corner-div-1,
-	.corner-div-2 {
-		width: 40%;
-		padding-bottom: 5%;
-	}
-
-	/* Bottom left corner */
-	.corner-div-3 {
-		width: 40%;
-		padding-bottom: 7%;
-	}
-
-	/* Bottom right corner */
-	.corner-div-4 {
-		width: 30%;
-		padding-bottom: 5%;
-	}
-
-	/*
-	*	Vertical
-	*/
-	.corner-div-1.vertical,
-	.corner-div-2.vertical,
-	.corner-div-3.vertical,
-	.corner-div-4.vertical {
-		width: 5%;
-		padding-bottom: 30%;
+	[class*="svg-"] {
+		width: 16%;
 	}
 }

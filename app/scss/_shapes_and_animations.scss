@@ -41,7 +41,7 @@
 
 /* 
 * SVG shapes
- */
+*/
 .svg-path-fill,
 .svg-path-fill-dark {
 	transition: var(--svg-transition);
@@ -56,10 +56,13 @@
 }
 
 [class*="svg-"] {
-	width: 16%;
+	width: 32%;
 	position: absolute;
 }
 
+/*
+* SVG shapes positionning
+*/
 .svg-top-left {
 	top: 0;
 	left: 0;

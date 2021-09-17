@@ -127,19 +127,3 @@ button {
 		transition: var(--general-transition);
 	}
 }
-
-[class*="svg-"] {
-	width: 40%;
-	position: absolute;
-
-}
-
-.svg-top-left {
-	top: 0;
-	left: 0;
-}
-
-.svg-top-right {
-	top: 0;
-	right: 0;
-}

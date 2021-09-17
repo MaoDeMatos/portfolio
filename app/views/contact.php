@@ -31,9 +31,15 @@
 		</ul>
 
 	</div>
+	
+	<svg class="svg-bottom-left" viewBox="0 0 135.2 135.2" xmlns="http://www.w3.org/2000/svg">
+		<use xlink:href="#blob-3" />
+	</svg>
 
-	<div class="corner-div-2"></div>
-	<div class="corner-div-4 vertical"></div>
+	<svg class="svg-bottom-right" viewBox="0 0 135.2 135.2" xmlns="http://www.w3.org/2000/svg">
+		<use xlink:href="#blob-4" />
+	</svg>
+
 </section>
 
 <section id="section-style-bubbles" class="color-theme-1"></section>

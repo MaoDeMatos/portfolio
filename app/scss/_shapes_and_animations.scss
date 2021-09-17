@@ -4,7 +4,6 @@
 * Menu button animation
 */
 #hamburger {
-	
 	span:before {
 		width: 80%;
 		bottom: 0.75rem;
@@ -19,7 +18,7 @@
 		top: 0.75rem;
 	}
 
-/* Arrow style */
+	/* Arrow style */
 	&.arrow {
 		span:before {
 			width: 40%;
@@ -40,89 +39,43 @@
 	}
 }
 
-/*
-*	Shapes styling
-*
-*	Containers
-*/
-.corner-div-1,
-.corner-div-2,
-.corner-div-3,
-.corner-div-4 {
-	position: absolute;
-	display: inline-block;
-	height: 0;
-	width: 100%;
-	padding-bottom: 15%;
-}
-
-.corner-div-1 {
-	top: 0;
-	left: 0;
-
-	&:after {
-		clip-path: polygon(90% 0, 0 0, 0 90%);
-	}
-}
-/* Top right corner */
-.corner-div-2 {
-	top: 0;
-	right: 0;
-
-	&:after {
-		clip-path: polygon(10% 0, 100% 90%, 100% 0);
-	}
-}
-
-/* Bottom left corner */
-.corner-div-3 {
-	bottom: 0;
-	left: 0;
-
-	&:after {
-		clip-path: polygon(90% 100%, 0 100%, 0 10%);
-	}
-}
-
-/* Bottom right corner */
-.corner-div-4 {
-	bottom: 0;
-	right: 0;
-	width: 30%;
-
-	&:after {
-		clip-path: polygon(100% 10%, 100% 100%, 10% 100%);
-	}
-}
-
-/*
-*	Vertical containers
-*/
-.corner-div-1.vertical,
-.corner-div-2.vertical,
-.corner-div-3.vertical,
-.corner-div-4.vertical {
-	width: 15%;
-	padding-bottom: 80%;
-}
-
 /* 
-* Shapes
-*/
-.corner-div-1::after,
-.corner-div-2::after,
-.corner-div-3::after,
-.corner-div-4::after,
-.corner-div-1.vertical::after,
-.corner-div-2.vertical::after,
-.corner-div-3.vertical::after,
-.corner-div-4.vertical::after {
-	content: "";
+* SVG shapes
+ */
+.svg-path-fill,
+.svg-path-fill-dark {
+	transition: var(--svg-transition);
+}
+
+.svg-path-fill {
+	fill: var(--accent-color);
+}
+
+.svg-path-fill-dark {
+	fill: var(--accent-color-dark);
+}
+
+[class*="svg-"] {
+	width: 16%;
 	position: absolute;
+}
+
+.svg-top-left {
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--accent-color);
-	transition: var(--general-transition);
+}
+
+.svg-top-right {
+	top: 0;
+	right: 0;
+}
+
+.svg-bottom-left {
+	bottom: 0;
+	left: 0;
+}
+
+.svg-bottom-right {
+	bottom: 0;
+	right: 0;
 }

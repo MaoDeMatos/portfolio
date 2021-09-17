@@ -138,10 +138,17 @@ function changeColorTheme() {
  * @param {string} cName Cookie name
  * @param {string} cValue Cookie value
  * @param {number} expirationDays Number of days before it expires (default value : 60)
+ *
+ * Created simply to store user preferences about the color theme
  */
 function setCookie(cName, cValue, expirationDays = 60) {
 	const date = new Date();
 	date.setTime(date.getTime() + expirationDays * 24 * 60 * 60 * 1000);
-	let expires = "expires=" + date.toUTCString();
-	document.cookie = cName + "=" + cValue + ";" + expires + ";path=/;SameSite=Strict; Secure";
+	document.cookie =
+		cName +
+		"=" +
+		cValue +
+		";expires=" +
+		date.toUTCString() +
+		";path=/;SameSite=Strict; Secure";
 }

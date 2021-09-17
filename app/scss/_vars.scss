@@ -31,7 +31,7 @@ $color-t: color #{$default-delay} #{$default-easing};
 $box-s-t: box-shadow #{$default-delay} #{$default-easing};
 $text-s-t: text-shadow #{$default-delay} #{$default-easing};
 
-$svg-gradients-t: #{$default-delay};
+$svg-t: fill #{$default-delay} #{$default-easing};
 
 // Colors
 $white: #fff;
@@ -47,7 +47,9 @@ $gray-900: #252525;
 $black: #000;
 
 $teal: #21bba1;
+$teal-dark: #286155;
 $pale-red: #ba183a;
+$pale-red-dark: #642026;
 
 $bg-alpha-dark: rgba(43, 43, 43, 0.8);
 $bg-alpha-light: rgba(235, 235, 235, 0.7);
@@ -56,6 +58,7 @@ $bg-alpha-light: rgba(235, 235, 235, 0.7);
 *	Color themes
 */
 :root {
+	--svg-transition: #{$svg-t};
 	--general-transition:
 		#{$bg-t},
 		#{$color-t},
@@ -70,7 +73,9 @@ html {
 		--bg-color-2: #{$gray-800};
 		--text-color: #{$gray-200};
 		--accent-color: #{$teal};
+		--accent-color-dark: #{$teal-dark};
 		--accent-color-2: #{$pale-red};
+		--accent-color-2-dark: #{$pale-red-dark};
 		--shadow-color: #{$black};
 		--bg-color-alpha: #{$bg-alpha-dark};
 	}
@@ -80,7 +85,9 @@ html {
 		--bg-color-2: #{$gray-300};
 		--text-color: #{$gray-900};
 		--accent-color: #{$pale-red};
+		--accent-color-dark: #{$pale-red-dark};
 		--accent-color-2: #{$teal};
+		--accent-color-2-dark: #{$teal-dark};
 		--shadow-color: #{$gray-600};
 		--bg-color-alpha: #{$bg-alpha-light};
 	}
@@ -102,8 +109,4 @@ html {
 	background-color: transparent;
 	color: var(--text-color);
 	transition: var(--general-transition);
-}
-
-stop {
-	transition: $svg-gradients-t;
 }

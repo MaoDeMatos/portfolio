@@ -21,7 +21,7 @@
 
 <body>
 
-	<?php require VIEWS . "svg/gradients.html" ?>
+	<?php	require VIEWS . "svg/paths.html" ?>
 
 	<div id="page_num" data-page-num="<?= $page_num ?>"></div>
 

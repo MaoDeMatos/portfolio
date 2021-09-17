@@ -6,7 +6,7 @@
 section {
 	&[class*="color-theme-1"] {
 		width: 100vw;
-		height: 50vh;
+		height: 40vh;
 	}
 
 	&[class*="color-theme-2"] {
@@ -44,26 +44,67 @@ section {
 *	Style sections
 */
 #section-style-start {
-	background: url("/src/img/code_block_web.svg") no-repeat var(--bg-color);
+	background: var(--bg-color) no-repeat;
 	background-position: calc(50% - 6rem) 0;
 	background-size: auto 90%;
-	margin-top: 1rem;
 }
 
 #section-style-languages {
-	background: url("/src/img/webdev.svg") no-repeat var(--bg-color);
+	background: var(--bg-color) no-repeat;
 	background-position: calc(50% - 2rem) 0;
 	background-size: auto 100%;
 }
 
 #section-style-pcs {
-	background: url("/src/img/pcs.svg") no-repeat var(--bg-color);
+	background: var(--bg-color) no-repeat;
 	background-position: calc(50% - 6rem) 0;
 	background-size: auto 90%;
 }
 
 #section-style-bubbles {
-	background: url("/src/img/speech_bubbles_grey.png") no-repeat var(--bg-color);
+	background: var(--bg-color) no-repeat;
 	background-position: calc(50% - 0rem) 4rem;
 	background-size: auto 60%;
+}
+
+/*
+*	Dark
+*/
+html.dark {
+	#section-style-start {
+		background-image: url("/src/img/code_block_web.svg");
+	}
+
+	#section-style-languages {
+		background-image: url("/src/img/webdev.svg");
+	}
+
+	#section-style-pcs {
+		background-image: url("/src/img/pcs.svg");
+	}
+
+	#section-style-bubbles {
+		background-image: url("/src/img/speech_bubbles_grey.png");
+	}
+}
+
+/*
+*	Light
+*/
+html.light {
+	#section-style-start {
+		background-image: url("/src/img/code_block_web_red.svg");
+	}
+
+	#section-style-languages {
+		background-image: url("/src/img/webdev.svg");
+	}
+
+	#section-style-pcs {
+		background-image: url("/src/img/pcs_red.svg");
+	}
+
+	#section-style-bubbles {
+		background-image: url("/src/img/speech_bubbles_black.png");
+	}
 }

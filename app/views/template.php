@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="dark">
+<html lang="fr" class="<?= $color_theme ?>">
 
 <head>
 	<meta charset="utf-8" />
@@ -41,12 +41,8 @@
 		</button>
 
 		<div class=buttons-container>
-			<!-- <a class="logo" href="/">
-				<img src="<?= IMG_DIR ?>" title="Logo" alt="Logo">
-			</a> -->
-
 			<button id="change-color-theme-button" type="button">
-				<img src="<?= IMG_DIR ?>sun.svg" title="Changer les couleurs" alt="Changer les couleurs" />
+				<img src="<?= $icons["theme"] ?>" title="Changer les couleurs" alt="Changer les couleurs" />
 			</button>
 		</div>
 
@@ -55,6 +51,7 @@
 
 	<?= $content ?>
 
+	<noscript>Impossible d'exécuter du code Javascipt : certaines fonctions du site seront indisponibles.</noscript>
 	<!-- Load libs/plugins -->
 	<script defer src="<?= JS_DIR ?>libs/jquery.min.3.6.0.js"></script>
 	<!-- Load main script -->

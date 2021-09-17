@@ -9,18 +9,15 @@
 
 body {
 	font-family: "Comfortaa", "Hurme Geometric Sans 3", "Trebuchet MS", sans-serif;
-	// position: relative;
-	// width: 100%;
-	// min-height: 100%;
 	margin: auto;
 	overflow: auto;
 	text-align: center;
 	font-size: 1.1rem;
 	word-break: break-word;
-	// letter-spacing: 0.05rem;
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	transition: var(--general-transition);
+	letter-spacing: 0.02rem;
 }
 
 ::selection {

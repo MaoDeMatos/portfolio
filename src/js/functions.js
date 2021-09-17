@@ -51,3 +51,97 @@ function scrollBarAnimation(scrollbar) {
 		scrollbar.prop("style", "width: " + scrollPercent + "vw;");
 	}
 }
+
+/**
+ * Toggle menu on/off
+ * @param $this The element that triggers the event
+ */
+function toggleMenu($this) {
+	/** Define "$this" for the setTimeout() function */
+	/** On desktop version */
+	if (windowW > 799) {
+		/** If not active : animates to the arrow */
+		if (!$this.hasClass("active")) {
+			$this.toggleClass("arrow");
+			setTimeout(function () {
+				$this.toggleClass("arrow").toggleClass("active").toggleClass("left");
+			}, 1000);
+			/** If already active : animates to the left */
+		} else {
+			$this.toggleClass("active");
+			setTimeout(function () {
+				$this.toggleClass("left");
+			}, 1000);
+		}
+		/** On mobile version */
+	} else {
+		$this.toggleClass("arrow");
+	}
+	nav.toggleClass("active");
+}
+
+/**
+ * Toggle light/dark modes
+ */
+function changeColorTheme() {
+	/** If page has light mode on */
+	if (html.hasClass("light")) {
+		/** Cancel animation queue on the image and fade it out */
+		color_theme_button.children("img").stop(true, true).fadeOut(200);
+
+		/** After .2s, change image and fade it back in */
+		setTimeout(function () {
+			color_theme_button
+				.children("img")
+				.prop("src", img_dir + "sun.svg")
+				.fadeIn(200);
+		}, 200);
+
+		/** Change the icons in the contact section */
+		contact_section
+			.find("#linkedin_img")
+			.attr("src", img_dir + "linkedin_grey.svg");
+		contact_section
+			.find("#github_img")
+			.attr("src", img_dir + "github_grey.svg");
+
+		setCookie("color_theme", "dark");
+		/** Else, page has dark mode on */
+	} else {
+		/** Cancel animation queue on the image and fade it out */
+		color_theme_button.children("img").stop(true, true).fadeOut(200);
+
+		/** After .2s, change image and fade it back in */
+		setTimeout(function () {
+			color_theme_button
+				.children("img")
+				.prop("src", img_dir + "moon-dark.svg")
+				.fadeIn(200);
+		}, 200);
+
+		/** Change the icons in the contact section */
+		contact_section
+			.find("#linkedin_img")
+			.attr("src", img_dir + "linkedin_black.svg");
+		contact_section
+			.find("#github_img")
+			.attr("src", img_dir + "github_black.svg");
+
+		setCookie("color_theme", "light");
+	}
+	/** Change the color theme class */
+	html.toggleClass("dark").toggleClass("light");
+}
+
+/**
+ * Set a cookie
+ * @param {string} cName Cookie name
+ * @param {string} cValue Cookie value
+ * @param {number} expirationDays Number of days before it expires (default value : 60)
+ */
+function setCookie(cName, cValue, expirationDays = 60) {
+	const date = new Date();
+	date.setTime(date.getTime() + expirationDays * 24 * 60 * 60 * 1000);
+	let expires = "expires=" + date.toUTCString();
+	document.cookie = cName + "=" + cValue + ";" + expires + ";path=/;SameSite=Strict; Secure";
+}

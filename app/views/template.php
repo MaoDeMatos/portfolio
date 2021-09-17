@@ -7,7 +7,6 @@
 	<meta http-equiv="Content-Type" content="text/html" />
 	<!-- Load stylesheets -->
 	<link rel="stylesheet" type="text/css" href="<?= CSS_DIR ?>style.min.css" />
-	<link rel="stylesheet" type="text/css" href="<?= CSS_DIR ?>media_queries.min.css" />
 	<!-- If needed, load page CSS -->
 	<?php if (isset($stylesheets) && !empty($stylesheets)) {
 		echo $stylesheets;
@@ -24,7 +23,7 @@
 
 	<?php require VIEWS . "svg/gradients.html" ?>
 
-	<div id="page_num" style="display: none" data-page-num="<?= $page_num ?>"></div>
+	<div id="page_num" data-page-num="<?= $page_num ?>"></div>
 
 	<!-- Header -->
 	<header id="main_header">

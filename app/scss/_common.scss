@@ -45,7 +45,7 @@ section {
 */
 #section-style-start {
 	background: var(--bg-color) no-repeat;
-	background-position: calc(50% - 6rem) 0;
+	background-position: calc(50% - 6rem) 1rem;
 	background-size: auto 90%;
 }
 
@@ -63,8 +63,8 @@ section {
 
 #section-style-bubbles {
 	background: var(--bg-color) no-repeat;
-	background-position: calc(50% - 0rem) 4rem;
-	background-size: auto 60%;
+	background-position: calc(50% - 3rem) 2rem;
+	background-size: auto 80%;
 }
 
 /*

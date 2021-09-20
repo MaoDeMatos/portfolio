@@ -30,6 +30,7 @@ $bg-t: background-color #{$default-delay} #{$default-easing};
 $color-t: color #{$default-delay} #{$default-easing};
 $box-s-t: box-shadow #{$default-delay} #{$default-easing};
 $text-s-t: text-shadow #{$default-delay} #{$default-easing};
+$border-t: border #{$default-delay} #{$default-easing};
 
 $svg-t: fill #{$default-delay} #{$default-easing};
 
@@ -63,7 +64,8 @@ $bg-alpha-light: rgba(235, 235, 235, 0.7);
 		#{$bg-t},
 		#{$color-t},
 		#{$box-s-t},
-		#{$text-s-t};
+		#{$text-s-t},
+		#{$border-t};
 }
 
 html {
@@ -88,7 +90,7 @@ html {
 		--accent-color-dark: #{$pale-red-dark};
 		--accent-color-2: #{$teal};
 		--accent-color-2-dark: #{$teal-dark};
-		--shadow-color: #{$gray-600};
+		--shadow-color: #{$gray-500};
 		--bg-color-alpha: #{$bg-alpha-light};
 	}
 }

@@ -18,27 +18,26 @@
 	*/
 	header {
 		nav {
-			width: 35rem;
+			width: 31.5rem;
 			height: 4rem;
 			top: 3.4rem;
 			right: auto;
 			left: 0;
-			transform: translateX(-35rem);
+			transform: translateX(-31.5rem);
 			background-color: transparent;
 
-			&:after {
-				content: "";
-				position: absolute;
-				width: 100%;
-				height: 0.15rem;
-				bottom: -0.25rem;
-				transform: translateX(-35rem);
-				background-color: var(--accent-color);
-				transition: transform 1s 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+			.round-style {
+				display: block;
+				border-top-right-radius: 2.2rem;
+				border-bottom-right-radius: 2.2rem;
+				transform: translateX(8rem);
 			}
 
-			&.active:after {
-				transform: translateX(0);
+			&.active {
+				.round-style {
+					transform: translateX(-2px);
+					border: var(--accent-color) 1px solid;
+				}
 			}
 
 			&#nav ul {
@@ -47,9 +46,13 @@
 				left: 1rem;
 
 				li {
-					font-size: 1.1rem;
+					font-size: 1rem;
 				}
 			}
+		}
+
+		.round-style-hamburger {
+			display: none;
 		}
 
 		#hamburger {
@@ -60,8 +63,9 @@
 				var(--general-transition);
 
 			&.active {
-				transform: translateX(27rem);
+				transform: translateX(23rem);
 			}
+
 			span,
 			span:before,
 			span:after {
@@ -70,7 +74,7 @@
 
 			/* Arrow styles */
 			&.arrow {
-				transform: translateX(27rem);
+				transform: translateX(23rem);
 
 				span:before {
 					bottom: calc(0.75rem - 0.25rem / 2 - 0.3rem);
@@ -113,10 +117,6 @@
 		.buttons-container {
 			left: auto;
 			right: 4rem;
-
-			.logo {
-				display: block;
-			}
 		}
 	}
 

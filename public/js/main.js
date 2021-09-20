@@ -2,6 +2,7 @@
  * Variables
  */
 var html = $("html"),
+	meta_theme_color = $("meta[name=theme-color]"),
 	nav = $("#nav"),
 	page_num = $("#page_num").attr("data-page-num"),
 	active_link = "header nav ul li:nth-child(" + page_num + ")",

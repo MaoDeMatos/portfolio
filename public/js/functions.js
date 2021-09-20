@@ -88,6 +88,7 @@ function changeColorTheme() {
 	if (html.hasClass("light")) {
 		/** Cancel animation queue on the image and fade it out */
 		color_theme_button.children("img").stop(true, true).fadeOut(200);
+		meta_theme_color.attr("content", "#252525");
 
 		/** After .2s, change image and fade it back in */
 		setTimeout(function () {
@@ -110,6 +111,7 @@ function changeColorTheme() {
 	} else {
 		/** Cancel animation queue on the image and fade it out */
 		color_theme_button.children("img").stop(true, true).fadeOut(200);
+		meta_theme_color.attr("content", "#b9b9b9");
 
 		/** After .2s, change image and fade it back in */
 		setTimeout(function () {

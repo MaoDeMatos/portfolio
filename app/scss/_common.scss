@@ -72,19 +72,19 @@ section {
 */
 html.dark {
 	#section-style-start {
-		background-image: url("/src/img/code_block_web.svg");
+		background-image: url("/public/img/code_block_web.svg");
 	}
 
 	#section-style-languages {
-		background-image: url("/src/img/webdev.svg");
+		background-image: url("/public/img/webdev.svg");
 	}
 
 	#section-style-pcs {
-		background-image: url("/src/img/pcs.svg");
+		background-image: url("/public/img/pcs.svg");
 	}
 
 	#section-style-bubbles {
-		background-image: url("/src/img/speech_bubbles_grey.png");
+		background-image: url("/public/img/speech_bubbles_grey.png");
 	}
 }
 
@@ -93,18 +93,18 @@ html.dark {
 */
 html.light {
 	#section-style-start {
-		background-image: url("/src/img/code_block_web_red.svg");
+		background-image: url("/public/img/code_block_web_red.svg");
 	}
 
 	#section-style-languages {
-		background-image: url("/src/img/webdev.svg");
+		background-image: url("/public/img/webdev.svg");
 	}
 
 	#section-style-pcs {
-		background-image: url("/src/img/pcs_red.svg");
+		background-image: url("/public/img/pcs_red.svg");
 	}
 
 	#section-style-bubbles {
-		background-image: url("/src/img/speech_bubbles_black.png");
+		background-image: url("/public/img/speech_bubbles_black.png");
 	}
 }

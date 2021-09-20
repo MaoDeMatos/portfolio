@@ -12,7 +12,7 @@ define('CONTROLLERS', APP_ROOT . 'controllers/');
 define('VIEWS', APP_ROOT . 'views/');
 define('CLASSES', APP_ROOT . 'classes/');
 
-define('PUBLIC_DIR', HOST . 'src/');
+define('PUBLIC_DIR', HOST . 'public/');
 
 define('JS_DIR', PUBLIC_DIR . 'js/');
 define('CSS_DIR', PUBLIC_DIR . 'css/');

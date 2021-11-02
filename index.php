@@ -9,7 +9,7 @@ if (
 ) {
   $color_theme = $_COOKIE["color_theme"];
 } else {
-  $color_theme = "dark";
+  $color_theme = "light";
 }
 
 // Change images depending of the color theme
@@ -23,7 +23,7 @@ if ($color_theme == "light") {
   $icons["github"] = IMG_DIR . "github_grey.svg";
 }
 
-// echo "<pre>"; print_r($icons);exit;
+$_GET["r"] = $_GET["r"] ?? "home";
 
 switch ($_GET["r"]) {
   case 'about':

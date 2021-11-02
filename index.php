@@ -14,13 +14,15 @@ if (
 
 // Change images depending of the color theme
 if ($color_theme == "light") {
-  $icons["theme"] = IMG_DIR . "moon-dark.svg";
-  $icons["linkedin"] = IMG_DIR . "linkedin_black.svg";
-  $icons["github"] = IMG_DIR . "github_black.svg";
+  $icons["theme"] = IMG_DIR . "icons/moon-dark.svg";
+  $icons["linkedin"] = IMG_DIR . "icons/linkedin_black.svg";
+  $icons["github"] = IMG_DIR . "icons/github_black.svg";
+  $icons["gitlab"] = IMG_DIR . "icons/gitlab_black.svg";
 } elseif ($color_theme == "dark") {
-  $icons["theme"] = IMG_DIR . "sun.svg";
-  $icons["linkedin"] = IMG_DIR . "linkedin_grey.svg";
-  $icons["github"] = IMG_DIR . "github_grey.svg";
+  $icons["theme"] = IMG_DIR . "icons/sun.svg";
+  $icons["linkedin"] = IMG_DIR . "icons/linkedin_grey.svg";
+  $icons["github"] = IMG_DIR . "icons/github_grey.svg";
+  $icons["gitlab"] = IMG_DIR . "icons/gitlab_grey.svg";
 }
 
 $_GET["r"] = $_GET["r"] ?? "home";

@@ -3,108 +3,40 @@
 *
 *	Common styles
 */
+
 section {
-	&[class*="color-theme-1"] {
-		width: 100vw;
-		height: 40vh;
-	}
+  &[class*="color-theme-1"] {
+    width: 100vw;
+    height: 40vh;
+  }
 
-	&[class*="color-theme-2"] {
-		position: relative;
-		width: 100vw;
-		padding: 8rem 10vw;
-		box-shadow: 0 0 1rem var(--shadow-color);
-		overflow: hidden;
-	}
+  &[class*="color-theme-2"] {
+    position: relative;
+    width: 100vw;
+    padding: 8rem 10vw;
+    box-shadow: 0 0 1rem var(--shadow-color);
+    overflow: hidden;
+  }
 
-	.content {
-		z-index: 1;
+  .content {
+    z-index: 1;
 
-		h1 {
-			margin-bottom: 3rem;
-			margin-top: 3rem;
+    h1 {
+      margin-bottom: 3rem;
+      margin-top: 3rem;
 
-			&:first-of-type {
-				margin-top: 0;
-			}
-		}
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
 
-		ul li {
-			margin: 0.5rem;
+    ul li {
+      margin: 0.5rem;
 
-			img {
-				width: 2.5rem;
-				height: auto;
-			}
-		}
-	}
-}
-
-/*
-*	Style sections
-*/
-#section-style-start {
-	background: var(--bg-color) no-repeat;
-	background-position: calc(50% - 6rem) 1rem;
-	background-size: auto 90%;
-}
-
-#section-style-languages {
-	background: var(--bg-color) no-repeat;
-	background-position: calc(50% - 2rem) 0;
-	background-size: auto 100%;
-}
-
-#section-style-pcs {
-	background: var(--bg-color) no-repeat;
-	background-position: calc(50% - 6rem) 0;
-	background-size: auto 90%;
-}
-
-#section-style-bubbles {
-	background: var(--bg-color) no-repeat;
-	background-position: calc(50% - 3rem) 2rem;
-	background-size: auto 80%;
-}
-
-/*
-*	Dark
-*/
-html.dark {
-	#section-style-start {
-		background-image: url("/public/img/code_block_web.svg");
-	}
-
-	#section-style-languages {
-		background-image: url("/public/img/webdev.svg");
-	}
-
-	#section-style-pcs {
-		background-image: url("/public/img/pcs.svg");
-	}
-
-	#section-style-bubbles {
-		background-image: url("/public/img/speech_bubbles_grey.png");
-	}
-}
-
-/*
-*	Light
-*/
-html.light {
-	#section-style-start {
-		background-image: url("/public/img/code_block_web_red.svg");
-	}
-
-	#section-style-languages {
-		background-image: url("/public/img/webdev.svg");
-	}
-
-	#section-style-pcs {
-		background-image: url("/public/img/pcs_red.svg");
-	}
-
-	#section-style-bubbles {
-		background-image: url("/public/img/speech_bubbles_black.png");
-	}
+      img {
+        width: 2.5rem;
+        height: auto;
+      }
+    }
+  }
 }

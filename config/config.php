@@ -1,6 +1,5 @@
 <?php
 
-// URLs configuration
 define('APP_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/app/');
 define('HOST', '/');
 
@@ -17,3 +16,5 @@ define('PUBLIC_DIR', HOST . 'public/');
 define('JS_DIR', PUBLIC_DIR . 'js/');
 define('CSS_DIR', PUBLIC_DIR . 'css/');
 define('IMG_DIR', PUBLIC_DIR . 'img/');
+
+// require 'autoload.php';

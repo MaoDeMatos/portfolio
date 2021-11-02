@@ -65,13 +65,13 @@ function toggleMenu($this) {
 			$this.toggleClass("arrow");
 			setTimeout(function () {
 				$this.toggleClass("arrow").toggleClass("active").toggleClass("left");
-			}, 1000);
+			}, 600);
 			/** If already active : animates to the left */
 		} else {
 			$this.toggleClass("active");
 			setTimeout(function () {
 				$this.toggleClass("left");
-			}, 1000);
+			}, 600);
 		}
 		/** On mobile version */
 	} else {
@@ -94,17 +94,20 @@ function changeColorTheme() {
 		setTimeout(function () {
 			color_theme_button
 				.children("img")
-				.prop("src", img_dir + "sun.svg")
+				.prop("src", img_dir + "icons/sun.svg")
 				.fadeIn(200);
 		}, 200);
 
 		/** Change the icons in the contact section */
 		contact_section
 			.find("#linkedin_img")
-			.attr("src", img_dir + "linkedin_grey.svg");
+			.attr("src", img_dir + "icons/linkedin_grey.svg");
 		contact_section
 			.find("#github_img")
-			.attr("src", img_dir + "github_grey.svg");
+			.attr("src", img_dir + "icons/github_grey.svg");
+      contact_section
+        .find("#gitlab_img")
+        .attr("src", img_dir + "icons/gitlab_grey.svg");
 
 		setCookie("color_theme", "dark");
 		/** Else, page has dark mode on */
@@ -117,17 +120,20 @@ function changeColorTheme() {
 		setTimeout(function () {
 			color_theme_button
 				.children("img")
-				.prop("src", img_dir + "moon-dark.svg")
+				.prop("src", img_dir + "icons/moon-dark.svg")
 				.fadeIn(200);
 		}, 200);
 
 		/** Change the icons in the contact section */
 		contact_section
 			.find("#linkedin_img")
-			.attr("src", img_dir + "linkedin_black.svg");
+			.attr("src", img_dir + "icons/linkedin_black.svg");
 		contact_section
 			.find("#github_img")
-			.attr("src", img_dir + "github_black.svg");
+			.attr("src", img_dir + "icons/github_black.svg");
+      contact_section
+        .find("#gitlab_img")
+        .attr("src", img_dir + "icons/gitlab_black.svg");
 
 		setCookie("color_theme", "light");
 	}

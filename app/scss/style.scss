@@ -7,10 +7,13 @@
 // Variables
 @import "vars";
 
-// Rules
+// Global rules
 @import "general";
 @import "common";
 @import "header";
+
+// Main rules
+@import "main";
 
 @import "shapes_and_animations";
 

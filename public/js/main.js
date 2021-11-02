@@ -1,11 +1,10 @@
 /**
  * Variables
  */
-var html = $("html"),
+let html = $("html"),
 	meta_theme_color = $("meta[name=theme-color]"),
 	nav = $("#nav"),
-	page_num = $("#page_num").attr("data-page-num"),
-	active_link = "header nav ul li:nth-child(" + page_num + ")",
+	active_link = "header nav ul li:nth-child(" + $("#page_num").attr("data-page-num") + ")",
 	img_dir = "/public/img/",
 	section_style_start = $("#section-style-start"),
 	section_style_languages = $("#section-style-languages"),

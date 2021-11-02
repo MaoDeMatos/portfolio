@@ -11,13 +11,13 @@ ob_start(); ?>
 	<span class="underline bold">Mao De Matos</span
 	>
 	: passionné d\'Arts Graphiques, mais surtout de
-	<span class="highlighted">technologie</span> et d\'<span class="highlighted"
+	<span class="bold">technologie</span> et d\'<span class="bold"
 		>informatique</span
 	>
 	!
 </p>
 
-<p>Par ici pour en savoir plus <a href="about">à propos de moi</a> !</p>';
+<p>Par ici pour en savoir plus <a href="about" class="highlighted">à propos de moi</a> !</p>';
 
 require VIEWS . "intro.php";?>
 

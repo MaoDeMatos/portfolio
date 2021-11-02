@@ -9,7 +9,7 @@ ob_start(); ?>
 <h1>à propos de moi</h1>
 
 <p>
-	<span class="underline bold">Mao De Matos</span> : passionné d\'Arts Graphiques, mais surtout de <span class="highlighted">technologie</span> et d\'<span class="highlighted">informatique</span> !
+	<span class="underline bold">Mao De Matos</span> : passionné d\'Arts Graphiques, mais surtout de <span class="bold">technologie</span> et d\'<span class="bold">informatique</span> !
 </p>
 
 <p>
@@ -18,7 +18,7 @@ ob_start(); ?>
 
 <p>Backend, frontend, web, IA, Jeux Vidéos, je m\'intéresse à tout !</p>';
 
-require VIEWS . "intro.php"; ?>
+include VIEWS . "intro.php"; ?>
 
 <!-- Skills section -->
 <?php include VIEWS . "skills.html"; ?>

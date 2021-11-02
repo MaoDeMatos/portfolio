@@ -7,8 +7,8 @@
   <meta http-equiv="Content-Type" content="text/html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Load stylesheets -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" type="text/css" href="<?= CSS_DIR ?>style.min.css" />
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+  <link rel="stylesheet" type="text/css" href="<?= CSS_DIR ?>style.min.css?<?= CSS_VERSION ?>" />
   <!-- If needed, load page CSS -->
   <?php if (isset($stylesheets) && !empty($stylesheets)) {
     echo $stylesheets;
@@ -60,8 +60,8 @@
   <!-- Load libs/plugins -->
   <script defer src="<?= JS_DIR ?>libs/jquery.min.3.6.0.js"></script>
   <!-- Load main script -->
-  <script defer src="<?= JS_DIR ?>functions.js"></script>
-  <script defer src="<?= JS_DIR ?>main.js"></script>
+  <script defer src="<?= JS_DIR ?>utils.js?<?= JS_VERSION ?>"></script>
+  <script defer src="<?= JS_DIR ?>main.js?<?= JS_VERSION ?>"></script>
   <!-- If needed, load page scripts -->
   <?= $scripts ?>
 </body>

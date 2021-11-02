@@ -1,8 +1,4 @@
 /**
- * Functions
- */
-
-/**
  * Changes the Y-position of an element's background.
  * It is designed to work with the "scroll" event.
  * @param {object} target A JQuery element

@@ -2,15 +2,11 @@
 
 require "config/config.php";
 
+define("CSS_VERSION", 'v1.0.0');
+define("JS_VERSION", 'v1.0.0');
+
 // Check the color theme cookie
-if (
-  isset($_COOKIE["color_theme"])
-  && !empty($_COOKIE["color_theme"])
-) {
-  $color_theme = $_COOKIE["color_theme"];
-} else {
-  $color_theme = "light";
-}
+$color_theme = $_COOKIE["color_theme"] ?? 'light';
 
 // Change images depending of the color theme
 if ($color_theme == "light") {

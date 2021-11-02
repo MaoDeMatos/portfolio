@@ -1,19 +1,17 @@
-// Variables
-
 /*
 *	Fonts
 * 
 * Main font
 */
 @font-face {
-	font-family: "Comfortaa";
-	src: url("/public/fonts/Comfortaa-Variable.ttf");
+  font-family: "Comfortaa";
+  src: url("/public/fonts/Comfortaa-Variable.ttf");
 }
 
 /* Titles font */
 @font-face {
-	font-family: "Hurme Geometric Sans 3";
-	src: url("/public/fonts/HurmeGeometricSans3.otf");
+  font-family: "Hurme Geometric Sans 3";
+  src: url("/public/fonts/HurmeGeometricSans3.otf");
 }
 
 // /* Monospace font */
@@ -59,56 +57,51 @@ $bg-alpha-light: rgba(235, 235, 235, 0.7);
 *	Color themes
 */
 :root {
-	--svg-transition: #{$svg-t};
-	--general-transition:
-		#{$bg-t},
-		#{$color-t},
-		#{$box-s-t},
-		#{$text-s-t},
-		#{$border-t};
+  --svg-transition: #{$svg-t};
+  --general-transition: #{$bg-t}, #{$color-t}, #{$box-s-t}, #{$text-s-t},
+    #{$border-t};
 }
 
 html {
+  &.dark {
+    --bg-color: #{$gray-900};
+    --bg-color-2: #{$gray-800};
+    --text-color: #{$gray-200};
+    --accent-color: #{$teal};
+    --accent-color-dark: #{$teal-dark};
+    --accent-color-2: #{$pale-red};
+    --accent-color-2-dark: #{$pale-red-dark};
+    --shadow-color: #{$black};
+    --bg-color-alpha: #{$bg-alpha-dark};
+  }
 
-	&.dark {
-		--bg-color: #{$gray-900};
-		--bg-color-2: #{$gray-800};
-		--text-color: #{$gray-200};
-		--accent-color: #{$teal};
-		--accent-color-dark: #{$teal-dark};
-		--accent-color-2: #{$pale-red};
-		--accent-color-2-dark: #{$pale-red-dark};
-		--shadow-color: #{$black};
-		--bg-color-alpha: #{$bg-alpha-dark};
-	}
-
-	&.light {
-		--bg-color: #{$gray-400};
-		--bg-color-2: #{$gray-300};
-		--text-color: #{$gray-900};
-		--accent-color: #{$pale-red};
-		--accent-color-dark: #{$pale-red-dark};
-		--accent-color-2: #{$teal};
-		--accent-color-2-dark: #{$teal-dark};
-		--shadow-color: #{$gray-500};
-		--bg-color-alpha: #{$bg-alpha-light};
-	}
+  &.light {
+    --bg-color: #{$gray-400};
+    --bg-color-2: #{$gray-300};
+    --text-color: #{$gray-900};
+    --accent-color: #{$pale-red};
+    --accent-color-dark: #{$pale-red-dark};
+    --accent-color-2: #{$teal};
+    --accent-color-2-dark: #{$teal-dark};
+    --shadow-color: #{$gray-500};
+    --bg-color-alpha: #{$bg-alpha-light};
+  }
 }
 
 .color-theme-1 {
-	background-color: var(--bg-color);
-	color: var(--text-color);
-	transition: var(--general-transition);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--general-transition);
 }
 
 .color-theme-2 {
-	background-color: var(--bg-color-2);
-	color: var(--text-color);
-	transition: var(--general-transition);
+  background-color: var(--bg-color-2);
+  color: var(--text-color);
+  transition: var(--general-transition);
 }
 
 .color-theme-3 {
-	background-color: transparent;
-	color: var(--text-color);
-	transition: var(--general-transition);
+  background-color: transparent;
+  color: var(--text-color);
+  transition: var(--general-transition);
 }

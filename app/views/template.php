@@ -2,9 +2,10 @@
 <html lang="fr" class="<?= $color_theme ?>">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Load stylesheets -->
 	<link rel="stylesheet" type="text/css" href="<?= CSS_DIR ?>style.min.css" />
 	<!-- If needed, load page CSS -->
@@ -54,7 +55,7 @@
 
 	<?= $content ?>
 
-	<noscript>Impossible d'exécuter du code Javascipt : certaines fonctions du site seront indisponibles.</noscript>
+	<noscript>Impossible d'exécuter des scripts : certaines fonctions du site seront indisponibles.</noscript>
 	<!-- Load libs/plugins -->
 	<script defer src="<?= JS_DIR ?>libs/jquery.min.3.6.0.js"></script>
 	<!-- Load main script -->

@@ -4,36 +4,38 @@
 * Menu button animation
 */
 #hamburger {
+  /* Base style */
   span:before {
     width: 80%;
-    bottom: 0.75rem;
+    bottom: .75rem;
   }
 
   span {
-    top: calc(50% - 0.25rem / 2);
+    width: 100%;
+    top: calc(50% - .25rem / 2);
   }
 
   span:after {
     width: 70%;
-    top: 0.75rem;
+    top: .75rem;
   }
 
   /* Arrow style */
   &.arrow {
     span:before {
       width: 40%;
-      bottom: calc(0.75rem - 0.25rem / 2 - 0.3rem);
+      bottom: calc(.75rem - .25rem / 2 - .3rem);
       transform: translateX(0) rotate(45deg);
     }
 
     span {
       width: 80%;
-      right: 0.1rem;
+      right: .1rem;
     }
 
     span:after {
       width: 40%;
-      top: calc(0.75rem - 0.25rem / 2 - 0.3rem);
+      top: calc(.75rem - .25rem / 2 - .3rem);
       transform: translateX(0) rotate(-45deg);
     }
   }
@@ -45,7 +47,7 @@
 [class*="svg-"] {
   width: 32%;
   position: absolute;
-  transition: var(--svg-transition);
+  transition: #{$svg-t};
 }
 
 .svg-path-fill {

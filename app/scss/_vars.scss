@@ -21,7 +21,7 @@
 // }
 
 // Transitions
-$default-delay: 0.4s;
+$default-delay: .4s;
 $default-easing: ease-out;
 
 $bg-t: background-color #{$default-delay} #{$default-easing};
@@ -29,6 +29,18 @@ $color-t: color #{$default-delay} #{$default-easing};
 $box-s-t: box-shadow #{$default-delay} #{$default-easing};
 $text-s-t: text-shadow #{$default-delay} #{$default-easing};
 $border-t: border #{$default-delay} #{$default-easing};
+$size-t: width #{$default-delay} #{$default-easing},
+  height #{$default-delay} #{$default-easing};
+
+$general-transition: #{$bg-t}, #{$color-t}, #{$box-s-t}, #{$text-s-t},
+  #{$border-t};
+
+$cubic-bezier-backwards: cubic-bezier(.18, .89, .32, 1.28);
+$cubic-bezier-quartic: cubic-bezier(.77, 0, .18, 1);
+
+@mixin transform-transition($delay: .8s, $easing: $cubic-bezier-quartic) {
+  transition: transform $delay $easing, $general-transition;
+}
 
 $svg-t: fill #{$default-delay} #{$default-easing};
 
@@ -50,58 +62,5 @@ $teal-dark: #286155;
 $pale-red: #ba183a;
 $pale-red-dark: #642026;
 
-$bg-alpha-dark: rgba(43, 43, 43, 0.8);
-$bg-alpha-light: rgba(235, 235, 235, 0.7);
-
-/*
-*	Color themes
-*/
-:root {
-  --svg-transition: #{$svg-t};
-  --general-transition: #{$bg-t}, #{$color-t}, #{$box-s-t}, #{$text-s-t},
-    #{$border-t};
-}
-
-html {
-  &.dark {
-    --bg-color: #{$gray-900};
-    --bg-color-2: #{$gray-700};
-    --text-color: #{$gray-200};
-    --accent-color: #{$teal};
-    --accent-color-dark: #{$teal-dark};
-    --accent-color-2: #{$pale-red};
-    --accent-color-2-dark: #{$pale-red-dark};
-    --shadow-color: #{$black};
-    --bg-color-alpha: #{$bg-alpha-dark};
-  }
-
-  &.light {
-    --bg-color: #{$gray-400};
-    --bg-color-2: #{$gray-200};
-    --text-color: #{$gray-900};
-    --accent-color: #{$pale-red};
-    --accent-color-dark: #{$pale-red-dark};
-    --accent-color-2: #{$teal};
-    --accent-color-2-dark: #{$teal-dark};
-    --shadow-color: #{$gray-500};
-    --bg-color-alpha: #{$bg-alpha-light};
-  }
-}
-
-.color-theme-1 {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: var(--general-transition);
-}
-
-.color-theme-2 {
-  background-color: var(--bg-color-2);
-  color: var(--text-color);
-  transition: var(--general-transition);
-}
-
-.color-theme-3 {
-  background-color: transparent;
-  color: var(--text-color);
-  transition: var(--general-transition);
-}
+$bg-alpha-dark: rgba(43, 43, 43, .8);
+$bg-alpha-light: rgba(235, 235, 235, .7);

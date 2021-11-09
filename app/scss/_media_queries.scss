@@ -59,8 +59,6 @@
       right: auto;
       left: 4rem;
       transform: translateX(0);
-      transition: all 1s cubic-bezier(0.77, 0, 0.18, 1),
-        var(--general-transition);
 
       &.active {
         transform: translateX(23rem);
@@ -77,8 +75,8 @@
         transform: translateX(23rem);
 
         span:before {
-          bottom: calc(0.75rem - 0.25rem / 2 - 0.3rem);
-          transform: translateX(calc(100% + 0.5rem)) rotate(45deg);
+          bottom: calc(.75rem - .25rem / 2 - .3rem);
+          transform: translateX(calc(100% + .5rem)) rotate(45deg);
         }
 
         span {
@@ -86,8 +84,8 @@
         }
 
         span:after {
-          top: calc(0.75rem - 0.25rem / 2 - 0.3rem);
-          transform: translateX(calc(100% + 0.5rem)) rotate(-45deg);
+          top: calc(.75rem - .25rem / 2 - .3rem);
+          transform: translateX(calc(100% + .5rem)) rotate(-45deg);
         }
       }
 
@@ -95,19 +93,19 @@
       &.left {
         span:before {
           width: 40%;
-          bottom: calc(0.75rem - 0.25rem / 2 - 0.3rem);
+          bottom: calc(.75rem - .25rem / 2 - .3rem);
           transform: translateX(0) rotate(-45deg);
         }
 
         span {
           width: 80%;
-          left: 0.1rem;
+          left: .1rem;
           transform: translateX(0) rotate(0);
         }
 
         span:after {
           width: 40%;
-          top: calc(0.75rem - 0.25rem / 2 - 0.3rem);
+          top: calc(.75rem - .25rem / 2 - .3rem);
           transform: translateX(0) rotate(45deg);
         }
       }
@@ -123,24 +121,25 @@
   /*
 	*	Style sections
 	*/
+  @mixin style-section($bg-pos, $bg-size) {
+    background-position: $bg-pos;
+    background-size: $bg-size;
+  }
+
   #section-style-start {
-    background-position: calc(50% - 6rem) 0;
-    background-size: auto 100%;
+    @include style-section(calc(50% - 6rem) 0, auto 100%);
   }
 
   #section-style-languages {
-    background-position: calc(50% - 6rem) 0;
-    background-size: auto 110%;
+    @include style-section(calc(50% - 6rem) 0, auto 110%);
   }
 
   #section-style-pcs {
-    background-position: calc(50% + 6rem) 0;
-    background-size: auto 100%;
+    @include style-section(calc(50% + 6rem) 0, auto 100%);
   }
 
   #section-style-bubbles {
-    background-position: calc(50% - 10rem) 1rem;
-    background-size: auto 100%;
+    @include style-section(calc(50% - 10rem) 1rem, auto 100%);
   }
 
   /*

@@ -1,7 +1,7 @@
 # Base image to use
 FROM nginx:alpine as base
 
-RUN rm -f /etc/nginx/conf.d/default.conf
+# RUN rm -f /etc/nginx/conf.d/default.conf
 # RUN apk update && apk upgrade
 # COPY docker-conf/httpd.conf /usr/local/apache2/conf
 

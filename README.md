@@ -14,4 +14,7 @@ The app runs with two docker containers :
 - NGINX server
 - PHP-fpm server
 
-Just use `docker-compose up -d` to run the app and `docker-compose stop` to stop it (or `docker-compose down` to completely remove it).
+Just use :
+- `docker-compose up -d` to run the app
+- `docker-compose stop` to stop it
+- `docker-compose down` to completely remove it

@@ -1,3 +1,4 @@
+<!-- Contact section -->
 <section id="section-style-pcs" class="color-theme-1"></section>
 
 <section id="section-contact" class="color-theme-2 flex column">

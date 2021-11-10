@@ -29,7 +29,7 @@ class About implements RouteI
     ob_start();
 
     include VIEWS . "sections/intro.php";
-    include VIEWS . "skills.html";
+    include VIEWS . "sections/skills.html";
     include VIEWS . "sections/contact.php";
 
     $content = ob_get_clean();

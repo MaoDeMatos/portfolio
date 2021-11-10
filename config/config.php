@@ -1,6 +1,6 @@
 <?php
 
-define('APP_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/app/');
+define('APP_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/App/');
 define('HOST', '/');
 
 /**

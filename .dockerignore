@@ -1,6 +1,5 @@
-# Ignore root dev files
 .git
+.gitignore
 
 *.md
-.gitignore
 .htaccess

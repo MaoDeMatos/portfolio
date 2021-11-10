@@ -1,0 +1,10 @@
+# Development values override
+services:
+  app:
+    restart: "no"
+    volumes:
+      - .:/app
+  php:
+    restart: "no"
+    volumes:
+      - .:/app

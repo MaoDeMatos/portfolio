@@ -1,0 +1,10 @@
+# PHP image
+FROM php:fpm-alpine
+
+WORKDIR /app
+
+COPY ./*.php     .
+COPY ./*.ico     .
+COPY ./config    ./config
+COPY ./App       ./App
+COPY ./public    ./public

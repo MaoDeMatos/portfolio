@@ -8,7 +8,7 @@ define('HOST', '/');
  * Define dir paths
  */
 define('CONTROLLERS', APP_ROOT . 'Controllers/');
-define('VIEWS', APP_ROOT . 'Views/');
+define('VIEWS', APP_ROOT . 'views/');
 
 define('PUBLIC_DIR', HOST . 'public/');
 

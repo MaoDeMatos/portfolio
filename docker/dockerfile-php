@@ -3,8 +3,6 @@ FROM php:fpm-alpine
 
 WORKDIR /app
 
-COPY ./*.php     .
-COPY ./*.ico     .
-COPY ./config    ./config
-COPY ./App       ./App
-COPY ./public    ./public
+COPY ./*.php      .
+COPY ./config     ./config
+COPY ./App        ./app

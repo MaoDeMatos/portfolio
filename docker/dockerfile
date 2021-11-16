@@ -8,8 +8,6 @@ FROM app_base AS app
 
 WORKDIR /app
 
-COPY ./*.php     .
-COPY ./*.ico     .
-COPY ./config    ./config
-COPY ./App       ./App
-COPY ./public    ./public
+COPY ./*.php      .
+COPY ./*.ico      .
+COPY ./public     ./public

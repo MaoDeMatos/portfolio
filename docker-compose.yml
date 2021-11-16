@@ -8,6 +8,8 @@ services:
       target: app
     ports:
       - "80:80"
+    depends_on:
+      - php
   php:
     restart: always
     build:

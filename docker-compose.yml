@@ -1,17 +1,31 @@
 # Base compose file (production)
+version: "3.8"
+
+# volumes:
+#   certificates:
+
 services:
   app:
     restart: always
     build:
       context: .
-      dockerfile: ./docker/dockerfile
-      target: app
+      target: nginx_server
     ports:
       - "80:80"
+    #   - "443:443"
+    # volumes:
+    #   # - ./docker/certbot/www/:/var/www/certbot/:ro
+    #   - certificates:/cert:ro
     depends_on:
       - php
+
   php:
     restart: always
     build:
       context: .
-      dockerfile: ./docker/dockerfile-php
+      target: php_fpm
+#   # SSL Certificates
+#   certbot:
+#     image: certbot/certbot:latest
+#     volumes:
+#       - certificates:/cert:rw

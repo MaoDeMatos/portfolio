@@ -1,8 +1,0 @@
-# PHP image
-FROM php:fpm-alpine
-
-WORKDIR /app
-
-COPY ./*.php      .
-COPY ./config     ./config
-COPY ./App        ./App

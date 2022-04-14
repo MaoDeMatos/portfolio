@@ -11,7 +11,8 @@
     </p>
 
     <p>
-      <a href="tel:0663709365" class="highlighted">06 63 70 93 65</a>
+      <?php //<a href="tel:0663709365" class="highlighted">06 63 70 93 65</a><
+      ?>
     </p>
 
     <ul class="flex flex-wrap">

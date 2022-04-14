@@ -22,7 +22,7 @@ if ($color_theme == "dark") {
   $icons["linkedin"] = IMG_DIR . "icons/linkedin_black.svg";
   $icons["github"] = IMG_DIR . "icons/github_black.svg";
   $icons["gitlab"] = IMG_DIR . "icons/gitlab_black.svg";
-  $meta_theme_color = "#b9b9b9";
+  $meta_theme_color = "#f0f0f0";
 }
 
 // // Debug lines

@@ -3,8 +3,10 @@ services:
   app:
     restart: "no"
     volumes:
-      - .:/app
+      - .:/app:ro
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+
   php:
     restart: "no"
     volumes:
-      - .:/app
+      - .:/app:ro

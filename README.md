@@ -1,6 +1,6 @@
-# Portfolio
+# This repo is not maintained or deployed anymore
 
-Personal portfolio hosted [here](https://maodematos.rf.gd/).
+# Portfolio
 
 I'm using [Haikei](https://app.haikei.app/) to generate styling elements.
 
